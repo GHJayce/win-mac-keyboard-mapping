@@ -44,3 +44,7 @@ IsChromeActive() {
     )
 }
 
+
+; close application
+; win+q -> alt+F4
+^q::!F4
