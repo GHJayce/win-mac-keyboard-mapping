@@ -25,24 +25,22 @@ LCtrl & Tab::AltTab
 
 
 
-;GroupAdd "commonSwitchTab", "ahk_exe chrome.exe"
-;GroupAdd "commonSwitchTab", "ahk_exe Code.exe"
-;#HotIf WinActive("ahk_group commonSwitchTab")
-#HotIf WinActive("ahk_exe chrome.exe")
+#HotIf IsChromeActive()
 ; prev tab
 ; win+shift+[
-Hotkey "^+[", CtrlPageUp
-CtrlPageUp(ThisHotkey)
-{
-    Send "^{PgUp}"
-}
+^+[::Send "^{PgUp}"
 
 ; next tab
 ; win+shift+]
-Hotkey "^+]", CtrlPageDown
-CtrlPageDown(ThisHotkey)
-{
-    Send "^{PgDn}"
-}
+^+]::Send "^{PgDn}"
 #HotIf
+
+IsChromeActive() {
+    processName := WinGetProcessName("A")
+    return (
+        processName = "chrome.exe"
+        or processName = "code.exe"
+        or processName = "obsidian.exe"
+    )
+}
 

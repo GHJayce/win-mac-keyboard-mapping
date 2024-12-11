@@ -14,6 +14,7 @@
 #### 备注
 - 锁屏快捷键与Microsoft快速助手按键冲突，需要在系统->可选功能->删除Microsoft快速助手，或者选择更换别的快捷键避免冲突。
 - 映射以后，结束终端因习惯问题会按ctrl+c，实际上触发的是win+c，误唤起Cortana，也建议将其卸载。
+- 要想使phpstorm拥有和mac一样的快捷键，需要安装[macos-for-all](https://plugins.jetbrains.com/plugin/13968-macos-for-all)按键插件。
 
 ### 测试
 windows 10工作正常。
