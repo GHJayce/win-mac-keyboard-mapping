@@ -18,7 +18,7 @@ LCtrl & Tab::AltTab
 
 
 ; close wechat window
-; win+w
+; win+w -> Esc
 #HotIf WinActive("ahk_exe WeChat.exe")
 <^w::Esc
 #HotIf
@@ -27,11 +27,11 @@ LCtrl & Tab::AltTab
 
 #HotIf IsChromeActive()
 ; prev tab
-; win+shift+[
+; win+shift+[ -> ctrl+page up
 ^+[::Send "^{PgUp}"
 
 ; next tab
-; win+shift+]
+; win+shift+] -> ctrl+page down
 ^+]::Send "^{PgDn}"
 #HotIf
 
