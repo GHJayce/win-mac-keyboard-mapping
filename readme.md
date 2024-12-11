@@ -1,7 +1,19 @@
 
 ## Win-Mac-Keyboard-Mapping
 
-它能帮助你在windows下拥有像mac一样的按键行为。由[SharpKeys](https://github.com/randyrants/sharpkeys) + [AutoHotKey](https://github.com/AutoHotkey/AutoHotkey)组合使用。
+它能帮助你在windows下拥有像mac一样的按键行为。
+
+> 默认在windows下win键对应mac环境的command键。
+
+例如（映射前按键 -> 映射后按键）：
+- 复制：`win + c` -> `ctrl + c`
+- 粘贴：`win + v` -> `ctrl + v`
+- 撤销：`win + z` -> `ctrl + z`
+- 剪切：`win + x` -> `ctrl + x`
+- 全选：`win + a` -> `ctrl + a`
+- 等等...
+
+由[SharpKeys](https://github.com/randyrants/sharpkeys) + [AutoHotKey](https://github.com/AutoHotkey/AutoHotkey)组合使用。
 
 ### 原理
 1. 用SharpKeys将ctrl键和win键进行交换（基于注册表的方式），能实现大部分的按键行为。
