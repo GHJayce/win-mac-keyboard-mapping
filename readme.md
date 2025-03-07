@@ -1,32 +1,35 @@
-
 ## Win-Mac-Keyboard-Mapping
 
-它能帮助你在windows下拥有像mac一样的按键行为。
+English | [中文](./readme.cn.md)
 
-> 默认在windows下win键对应mac环境的command键。
+It helps you have Mac-like key behavior on Windows.
 
-例如（映射前按键 -> 映射后按键）：
-- 复制：`win + c` -> `ctrl + c`
-- 粘贴：`win + v` -> `ctrl + v`
-- 撤销：`win + z` -> `ctrl + z`
-- 剪切：`win + x` -> `ctrl + x`
-- 全选：`win + a` -> `ctrl + a`
-- 等等...
+> By default, the Win key on Windows corresponds to the Command key in the Mac environment.
 
-由[SharpKeys](https://github.com/randyrants/sharpkeys) + [AutoHotKey](https://github.com/AutoHotkey/AutoHotkey)组合使用。
+For example (before mapping -> after mapping):
+- Copy: `win + c` -> `ctrl + c`
+- Paste: `win + v` -> `ctrl + v`
+- Undo: `win + z` -> `ctrl + z`
+- Cut: `win + x` -> `ctrl + x`
+- Select All: `win + a` -> `ctrl + a`
+- And so on...
 
-### 原理
-1. 用SharpKeys将ctrl键和win键进行交换（基于注册表的方式），能实现大部分的按键行为。
-2. 用AutoHotKey完善剩下的按键行为（基于运行脚本的方式，AutoHotKey v2语法版本），例如切换窗口应用、锁屏等。
+It uses a combination of [SharpKeys](https://github.com/randyrants/sharpkeys) + [AutoHotKey](https://github.com/AutoHotkey/AutoHotkey).
 
-### 使用
-1. 下载安装SharpKeys，将ctrl键和win键交换。
-2. 下载安装AutoHotKey，将[mac-keyboard.ahk](./mac-keyboard.ahk)下载到本地，右键用管理员运行该脚本。
+### Principle
+1. Use SharpKeys to swap the Ctrl key and the Win key (based on the registry), which can achieve most key behaviors.
+2. Use AutoHotKey to complete the remaining key behaviors (based on running scripts, AutoHotKey v2 syntax version), such as switching window applications, locking the screen, etc.
 
-#### 备注
-- 锁屏快捷键与Microsoft快速助手按键冲突，需要在系统->可选功能->删除Microsoft快速助手，或者选择更换别的快捷键避免冲突。
-- 映射以后，结束终端因习惯问题会按ctrl+c，实际上触发的是win+c，误唤起Cortana，也建议将其卸载。
-- 要想使phpstorm拥有和mac一样的快捷键，在运行本脚本后需要在phpstorm中安装[macos-for-all](https://plugins.jetbrains.com/plugin/13968-macos-for-all)按键插件。
+### Usage
+1. Download and install SharpKeys, swap the Ctrl key and the Win key.
+2. Download and install AutoHotKey, download [mac-keyboard.ahk](./mac-keyboard.ahk) locally, right-click and run the script as an administrator.
 
-### 测试
-windows 10工作正常。
+### Support
+- Works fine on Windows 10 22H2.
+- Other Windows versions.
+
+### Known Issues
+- The lock screen shortcut key conflicts with Microsoft Quick Assist. You need to go to System -> Optional Features -> Remove Microsoft Quick Assist, or choose another shortcut key to avoid conflicts.
+- After mapping, ending the terminal by habit will press Ctrl+C, which actually triggers Win+C, mistakenly invoking Cortana. It is also recommended to uninstall it.
+- To make PhpStorm have the same shortcuts as Mac, after running this script, you need to install the [macos-for-all](https://plugins.jetbrains.com/plugin/13968-macos-for-all) key plugin in PhpStorm.
+- The switching window applications shortcut key conflicts with the Ctrl+Tab shortcut key of the Dev-C++ application. It is recommended to adjust the shortcut key of Dev-C++.
